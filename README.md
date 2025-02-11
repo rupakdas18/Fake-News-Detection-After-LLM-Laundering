@@ -16,5 +16,5 @@ This GitHub repository has two datasets where three LLM-based paraphrasers (GPT,
   -supervised_learning_2.py: Code for supervised classification techniques
   -bert_classifier: Contains the code to fine-tune a BERT model for text classification
   -T5_classifier: Contains the code to fine-tune a T5 model for text classification
-  -explainer_cnn_lstm: Code for the LIME explanability
+  -explainer_cnn_lstm: Code for the LIME explainability
 
