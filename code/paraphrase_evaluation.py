@@ -1,9 +1,5 @@
 # -*- coding: utf-8 -*-
-"""
-Created on Sun Sep 29 23:25:13 2024
 
-@author: rjd6099
-"""
 '''
 BERT_score
 '''
