@@ -1,9 +1,4 @@
 # -*- coding: utf-8 -*-
-"""
-Created on Fri Aug 30 11:35:18 2024
-
-@author: rjd6099
-"""
 
 import nltk
 from nltk.tokenize import word_tokenize
