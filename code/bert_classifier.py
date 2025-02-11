@@ -1,11 +1,4 @@
 # -*- coding: utf-8 -*-
-"""
-Created on Sun Oct 13 15:08:59 2024
-
-@author: rjd6099
-
-'BERT classifier'
-"""
 
 from transformers import DistilBertTokenizer
 from transformers import DistilBertForSequenceClassification, AdamW, DistilBertConfig
