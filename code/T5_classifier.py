@@ -1,12 +1,5 @@
 # -*- coding: utf-8 -*-
-"""
-Created on Mon Oct  7 13:00:58 2024
 
-@author: rjd6099
-
-Text classification using T5 model
-
-"""
 
 
 
