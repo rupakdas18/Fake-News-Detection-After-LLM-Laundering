@@ -4,7 +4,8 @@ This GitHub repository has two datasets where three LLM-based paraphrasers (GPT,
 
 
 
-- **All the codings are available in the "code" folder.** 
+- **All the codings are available in the "code" folder.**
+- 
   -llama_fine-tune.py: Contains the code to fine-tune a Llama model for text classification
   -Paraphrasing_using_PLMs.py: Code to generate paraphrase text
   -sentiment analysis.py: Code for sentiment analysis
