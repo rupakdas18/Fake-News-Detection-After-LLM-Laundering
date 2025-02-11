@@ -1,9 +1,5 @@
 # -*- coding: utf-8 -*-
-"""
-Created on Tue Oct 15 12:50:09 2024
 
-@author: rjd6099
-"""
 
 
 
