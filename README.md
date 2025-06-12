@@ -19,6 +19,8 @@ With their advanced capabilities, Large Language Models (LLMs) can generate high
 
 **Results**
 
+***Human-writing vs Paraphrase:***
+
 The classification performance for the human-written versus LLM paraphrased Covid-19 dataset is shown below.
 |           | Human-written |       |       |       | GPT-generated |       |       |       | Llama-generated |       |       |       | Pegasus-generated |       |       |       |
 |-----------|---------------|-------|-------|-------|---------------|-------|-------|-------|-----------------|-------|-------|-------|-------------------|-------|-------|-------|
@@ -41,6 +43,10 @@ The classification performance for the human-written versus LLM paraphrased Covi
 | DT-cv     | 0.856         | 0.855 | 0.855 | 0.856 | 0.807         | 0.807 | 0.807 | 0.807 | 0.793           | 0.793 | 0.793 | 0.793 | 0.804             | 0.804 | 0.804 | 0.804 |
 | DT-tfidf  | 0.846         | 0.846 | 0.846 | 0.846 | 0.807         | 0.806 | 0.808 | 0.807 | 0.785           | 0.785 | 0.785 | 0.785 | 0.786             | 0.786 | 0.786 | 0.786 |
 | DT-wv     | 0.77          | 0.77  | 0.77  | 0.77  | 0.742         | 0.742 | 0.742 | 0.742 | 0.735           | 0.735 | 0.737 | 0.735 | 0.721             | 0.722 | 0.723 | 0.721 |
+
+!["Methodology"](figures/Covid-19_comparison.png)
+*Figure 1: Performance of fake news detectors on human-written and LLM-paraphrased text on the Covid-19 dataset.*
+
 
 
 The classification performance for the human-written versus LLM paraphrased LIAR dataset is shown below.
@@ -66,3 +72,26 @@ The classification performance for the human-written versus LLM paraphrased LIAR
 | DT-cv     | 0.233         | 0.222 | 0.229 | 0.222 | 0.222         | 0.219 | 0.219 | 0.222 | 0.234           | 0.233 | 0.234 | 0.234 | 0.21              | 0.209 | 0.209 | 0.21  |
 | DT-tfidf  | 0.201         | 0.192 | 0.193 | 0.193 | 0.204         | 0.199 | 0.197 | 0.204 | 0.199           | 0.197 | 0.197 | 0.199 | 0.209             | 0.208 | 0.207 | 0.209 |
 | DT-wv     | 0.18          | 0.172 | 0.172 | 0.172 | 0.179         | 0.179 | 0.18  | 0.179 | 0.195           | 0.195 | 0.196 | 0.195 | 0.192             | 0.192 | 0.193 | 0.192 |
+
+
+![description](figures/Liar-6_comparison.png)
+*Figure 2: Performance of fake news detectors on human-written and LLM-paraphrased text on the LIAR dataset.*
+
+
+***Semantic similarity of the paraphrased text***
+
+
+!["Methodology"](figures/covid_19_bert_f1_distribution.png)
+*Figure 3: Distribution of FBERT score for all paraphrasers on the COVID-19 dataset.*
+
+
+!["Methodology"](figures/liar_bert_f1_distribution.png)
+*Figure 4: Distribution of FBERT score for all paraphrasers on the LIAR dataset.*
+
+
+
+*** Readability score distribution of human-written text vs LLM-generated text***
+
+
+
+
