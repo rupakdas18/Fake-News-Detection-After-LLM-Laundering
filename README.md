@@ -1,8 +1,10 @@
 # Fake-News-Detection-After-LLM-Laundering
 
+## Abstract
+
 With their advanced capabilities, Large Language Models (LLMs) can generate highly convincing and contextually relevant fake news, which can contribute to disseminating misinformation. Though there is much research on fake news detection for human-written text, the field of detecting LLM-generated fake news is still under-explored. This research measures the efficacy of detectors in identifying LLM-paraphrased fake news, in particular, determining whether adding a paraphrase step in the detection pipeline helps or impedes detection. This study contributes: (1) Detectors struggle to detect LLM-paraphrased fake news more than human-written text, (2) We find which models excel at which tasks (evading detection, paraphrasing to evade detection, and paraphrasing for semantic similarity). (3) Via LIME explanations, we discovered a possible reason for detection failures: sentiment shift. (4) We discover a worrisome trend for paraphrase quality measurement: samples that exhibit sentiment shift despite a high BERTSCORE. (5) We provide a pair of datasets, augmenting existing datasets with paraphrase outputs and scores.
 
-**Coding Description**
+## Coding Description
 
 - **llama_fine-tune.py:** Contains the code to fine-tune a Llama model for text classification
 - **Paraphrasing_using_PLMs.py:** Code to generate paraphrased text
@@ -17,9 +19,9 @@ With their advanced capabilities, Large Language Models (LLMs) can generate high
 - **T5_classifier:** Contains the code to fine-tune a T5 model for text classification
 - **explainer_cnn_lstm:** Code for the LIME explainability
 
-**Results**
+## Results
 
-***Human-writing vs Paraphrase:***
+- ### Performance of detectors on Human-writing vs Paraphrase text
 
 The results show that the detectors struggle to detect LLM-generated fake news more than human-written fake news. The classification performance for the human-written versus LLM paraphrased Covid-19 dataset is shown in Table 1. Figure 1 compares F1-scores among all the detectors.
 |           | Human-written |       |       |       | GPT-generated |       |       |       | Llama-generated |       |       |       | Pegasus-generated |       |       |       |
@@ -77,7 +79,7 @@ The classification performance for the human-written versus LLM paraphrased LIAR
 *Figure 2: Performance of fake news detectors on human-written and LLM-paraphrased text on the LIAR dataset.*
 
 
-*** Semantic similarity of the paraphrased text ***
+- ### Semantic similarity of the paraphrased text
 
 Figures 2 and 3 illustrate the semantic similarity distributions. We also measured effect sizes on the FBERT score between treatments (different paraphrasers). For the COVID-19 dataset, we find a small effect size between GPT and Llama (Hedge’s g, 0.34), which indicates a low difference in the semantic similarity between their paraphrased text outputs. In contrast, we find very large effect sizes between GPT and Pegasus (Hedge’s g, 1.78) and between Llama and Pegasus (Hedge’s g, 1.47). These results indicate that GPT and Llama produce paraphrases with practically significantly higher semantic similarity than Pegasus. For the LIAR dataset, we find negligible effects between Llama and non-GPT paraphrasers (Hedge’s g, g < .06), but a medium effect size between GPT and Llama (Hedge’s g, 0.60), which substantiates our observation about the superior FBERT scores that GPT paraphrases possess.
 
@@ -92,7 +94,7 @@ Figures 2 and 3 illustrate the semantic similarity distributions. We also measur
 
 
 
-*** Readability score distribution of human-written text vs LLM-generated text  ***
+- ### Readability score distribution of human-written text vs LLM-generated text
 
 Figures 5 and 6 show the readability score distribution for all four versions of the COVID-19 dataset and LIAR dataset respectively. 
 
@@ -107,7 +109,7 @@ Figures 5 and 6 show the readability score distribution for all four versions of
 
 
 
-***  Dependency parse tree depth distribution of human-written text vs LLM-generated text  ***
+- ###  Dependency parse tree depth distribution of human-written text vs LLM-generated text
 
 Figures 7 and 8 present the depth of the parse tree syntactic feature for the COVID-19 and LIAR datasets. 
 
@@ -120,7 +122,7 @@ Figures 7 and 8 present the depth of the parse tree syntactic feature for the CO
 *Figure 8: Distribution of Dependency parse tree depth for all paraphrasers on the LIAR dataset.*
 
 
-*** Explainability outputs ***
+- ### Explainability outputs
 !["Methodology"](figures/LIME_output.png)
 
 *Figure 9: (Top Left): LIME output of the BERT model on human-written news (Bottom Left): LIME output of
