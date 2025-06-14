@@ -21,7 +21,7 @@ With their advanced capabilities, Large Language Models (LLMs) can generate high
 
 ***Human-writing vs Paraphrase:***
 
-The classification performance for the human-written versus LLM paraphrased Covid-19 dataset is shown below.
+The results show that the detectors struggle to detect LLM-generated fake news more than human-written fake news. The classification performance for the human-written versus LLM paraphrased Covid-19 dataset is shown in Table 1. Figure 1 compares F1-scores among all the detectors.
 |           | Human-written |       |       |       | GPT-generated |       |       |       | Llama-generated |       |       |       | Pegasus-generated |       |       |       |
 |-----------|---------------|-------|-------|-------|---------------|-------|-------|-------|-----------------|-------|-------|-------|-------------------|-------|-------|-------|
 | Pipeline  | Acc           | F1    | Pre   | Rec   | Acc           | F1    | Pre   | Rec   | Acc             | F1    | Pre   | Rec   | Acc               | F1    | Pre   | Rec   |
@@ -47,9 +47,7 @@ The classification performance for the human-written versus LLM paraphrased Covi
 !["Methodology"](figures/Covid-19_comparison.png)
 *Figure 1: Performance of fake news detectors on human-written and LLM-paraphrased text on the Covid-19 dataset.*
 
-
-
-The classification performance for the human-written versus LLM paraphrased LIAR dataset is shown below.
+The classification performance for the human-written versus LLM paraphrased LIAR dataset is shown in Table 2. Figure 2 compares F1-scores among all the detectors.
 
 |           | Human-written |       |       |       | GPT-generated |       |       |       | Llama-generated |       |       |       | Pegasus-generated |       |       |       |
 |-----------|---------------|-------|-------|-------|---------------|-------|-------|-------|-----------------|-------|-------|-------|-------------------|-------|-------|-------|
@@ -81,6 +79,7 @@ The classification performance for the human-written versus LLM paraphrased LIAR
 
 *** Semantic similarity of the paraphrased text ***
 
+Figures 2 and 3 illustrate the semantic similarity distributions. We also measured effect sizes on the FBERT score between treatments (different paraphrasers). For the COVID-19 dataset, we find a small effect size between GPT and Llama (Hedge’s g, 0.34), which indicates a low difference in the semantic similarity between their paraphrased text outputs. In contrast, we find very large effect sizes between GPT and Pegasus (Hedge’s g, 1.78) and between Llama and Pegasus (Hedge’s g, 1.47). These results indicate that GPT and Llama produce paraphrases with practically significantly higher semantic similarity than Pegasus. For the LIAR dataset, we find negligible effects between Llama and non-GPT paraphrasers (Hedge’s g, g < .06), but a medium effect size between GPT and Llama (Hedge’s g, 0.60), which substantiates our observation about the superior FBERT scores that GPT paraphrases possess.
 
 !["Methodology"](figures/covid_19_bert_f1_distribution.png)
 
@@ -95,6 +94,8 @@ The classification performance for the human-written versus LLM paraphrased LIAR
 
 *** Readability score distribution of human-written text vs LLM-generated text  ***
 
+Figures 5 and 6 show the readability score distribution for all four versions of the COVID-19 dataset and LIAR dataset respectively. 
+
 !["Methodology"](figures/covid-19_readability_comparison.png)
 
 *Figure 5: Distribution of Readability score for all paraphrasers on the COVID-19 dataset.*
@@ -107,6 +108,8 @@ The classification performance for the human-written versus LLM paraphrased LIAR
 
 
 ***  Dependency parse tree depth distribution of human-written text vs LLM-generated text  ***
+
+Figures 7 and 8 present the depth of the parse tree syntactic feature for the COVID-19 and LIAR datasets. 
 
 !["Methodology"](figures/covid-19_dependency_depth_distribution.png)
 
