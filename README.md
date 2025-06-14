@@ -75,22 +75,58 @@ The classification performance for the human-written versus LLM paraphrased LIAR
 
 
 ![description](figures/Liar-6_comparison.png)
+
 *Figure 2: Performance of fake news detectors on human-written and LLM-paraphrased text on the LIAR dataset.*
 
 
-***Semantic similarity of the paraphrased text***
+*** Semantic similarity of the paraphrased text ***
 
 
 !["Methodology"](figures/covid_19_bert_f1_distribution.png)
+
 *Figure 3: Distribution of FBERT score for all paraphrasers on the COVID-19 dataset.*
 
 
 !["Methodology"](figures/liar_bert_f1_distribution.png)
+
 *Figure 4: Distribution of FBERT score for all paraphrasers on the LIAR dataset.*
 
 
 
-*** Readability score distribution of human-written text vs LLM-generated text***
+*** Readability score distribution of human-written text vs LLM-generated text  ***
+
+!["Methodology"](figures/covid-19_readability_comparison.png)
+
+*Figure 5: Distribution of Readability score for all paraphrasers on the COVID-19 dataset.*
+
+!["Methodology"](figures/liar_6_readability_comparison.png)
+
+*Figure 6: Distribution of Readability score for all paraphrasers on the LIAR dataset.*
+
+
+
+
+***  Dependency parse tree depth distribution of human-written text vs LLM-generated text  ***
+
+!["Methodology"](figures/covid-19_dependency_depth_distribution.png)
+
+*Figure 7: Distribution of Dependency parse tree depth for all paraphrasers on the COVID-19 dataset.*
+
+!["Methodology"](figures/liar_6_dependency_depth_distribution.png)
+
+*Figure 8: Distribution of Dependency parse tree depth for all paraphrasers on the LIAR dataset.*
+
+
+*** Explainability outputs ***
+!["Methodology"](figures/LIME_output.png)
+
+*Figure 9: (Top Left): LIME output of the BERT model on human-written news (Bottom Left): LIME output of
+the BERT model on Llama-paraphrased news (Top Right): LIME output of the LSTM model on human-written
+news (Bottom Right): LIME output of the LSTM model on GPT-paraphrased news.*
+
+
+
+
 
 
 
